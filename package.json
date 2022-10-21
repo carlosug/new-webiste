@@ -1,0 +1,74 @@
+{
+    "name": "carlos-utrilla-guerrero-website",
+    "description": "Carlos Utrilla-Guerrero personal website.",
+    "version": "0.1.1",
+    "homepage": "https://carlosug.github.io/new-website",
+    "author": {
+        "name": "Carlos Utrilla-Guerrero",
+        "email": "c.utrilla.guerrero@gmail.com",
+        "url": "https://carlosug.github.io/new-website"
+    },
+    "keywords": [
+        "Carlos Utrilla-Guerrero",
+        "personal website"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "dev": "gatsby develop",
+        "serve": "gatsby build && gatsby serve -p 8000",
+        "clean": "gatsby clean",
+        "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public -r https://$GITHUB_TOKEN@github.com/carlosug/carlosug.github.io.git",
+        "style": "yarn run format && yarn run lint",
+        "format": "yarn prettier --ignore-path .eslintignore ./src --write --config ./.prettierrc",
+        "check": "yarn prettier --ignore-path .eslintignore ./src --check --config ./.prettierrc",
+        "lint": "yarn eslint ./src --cache --config ./.eslintrc.json",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@mui/icons-material": "^5.10.1",
+        "@mui/lab": "^5.0.0-alpha.100",
+        "@mui/material": "^5.10.1",
+        "@mui/styles": "^5.10.1",
+        "deepmerge": "^4.2.2",
+        "gatsby": "^3.4.2",
+        "gatsby-plugin-layout": "^2.4.0",
+        "gatsby-plugin-manifest": "^3.4.0",
+        "gatsby-plugin-material-ui": "^3.0.1",
+        "gatsby-plugin-offline": "^4.4.0",
+        "gatsby-plugin-react-helmet": "^4.4.0",
+        "gatsby-plugin-typescript": "^3.4.0",
+        "markdown-to-jsx": "^7.1.7",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-helmet": "^6.1.0",
+        "react-icons": "^4.2.0"
+    },
+    "devDependencies": {
+        "@material-ui/core": "^4.12.4",
+        "@material-ui/icons": "^4.11.3",
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.3",
+        "@types/react-helmet": "^6.1.1",
+        "@typescript-eslint/eslint-plugin": "^4.22.1",
+        "@typescript-eslint/parser": "^4.22.1",
+        "eslint": "^7.26.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "prettier": "^2.2.1",
+        "typescript": "^4.2.4"
+    },
+    "resolutions": {
+        "postcss": "^8.2.12",
+        "cssnano": "^5.0.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://carlosug.github.io/new-website"
+    },
+    "bugs": {
+        "url": "https://github.com/carlosug/new-website/issues"
+    }
+}
